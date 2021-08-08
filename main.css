@@ -9,11 +9,12 @@
   --main-color: #143d59;
   --secondary-color: #f4b41a;
   --tertiary-color: white;
+  /* Measurements */
+  --canvas-length: 16;
   /* Properties */
   color: var(--tertiary-color);
   text-align: center;
 }
-
 #main-container {
   display: flex;
   flex-direction: column;
@@ -23,20 +24,17 @@
   overflow: hidden;
   background-color: var(--main-color);
 }
-
 #config-container {
   display: flex;
   flex-direction: column;
 }
-
 button#create-canvas {
   display: block;
   margin: 0 auto;
 }
-
 #canvas-container {
   --side-length: 20rem;
-  display: grid;
+  display: block;
   padding: 0;
   margin: 2rem auto;
   height: var(--side-length);
@@ -44,9 +42,17 @@ button#create-canvas {
   background-color: var(--secondary-color);
   border: 0.5rem solid var(--tertiary-color);
 }
-
-/* #area-slider::after {
-  color: var(--tertiary-color);
-  margin-left: 5rem;
-  content: attr(value) " ";
-} */
+.canvas-active {
+  display: grid !important;
+  grid: repeat(var(--canvas-length), 1fr) / repeat(var(--canvas-length), 1fr) !important;
+}
+.pixel {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+}
+.pixel-active {
+  background-color: black;
+}
