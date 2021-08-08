@@ -91,7 +91,6 @@ meta.elems.button.addEventListener("click", (detected) => {
   if (detected) methods.generateCanvas();
 });
 // */ //
-
 /* // approach
 
 single box
