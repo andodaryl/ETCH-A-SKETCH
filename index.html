@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <title>Etch-A-Sketch</title>
   </head>
-  <body></body>
+  <body>
+    <div id="main-container">
+      <header>
+        <h1 class="title">ETCH-A-SKETCH</h1>
+        <p>Drag mouse over the canvas to draw</p>
+      </header>
+      <section id="config-container">
+        <form
+          id="config-form"
+          oninput="displayArea.value = parseInt(areaSlider.value)"
+        >
+          <label for="area-slider">
+            <h2 class="title">Set canvas area</h2>
+          </label>
+          <input type="range" id="areaSlider" min="1" max="100" value="16" />
+          <output name="displayArea" for="area-slider">16</output>
+          <button type="button" id="create-canvas">Create Canvas</button>
+        </form>
+      </section>
+      <section id="canvas-container"></section>
+    </div>
+    <noscript>Please enable Javascript to play this beautiful game!</noscript>
+    <script src="./main.js"></script>
+  </body>
 </html>
