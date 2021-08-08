@@ -41,7 +41,7 @@ button#create-canvas {
   margin: 2rem auto;
   height: var(--side-length);
   width: var(--side-length);
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
   border: 0.5rem solid var(--tertiary-color);
 }
 
